@@ -1,5 +1,7 @@
 # Brain Decoder 2
 
+![](image.png)
+
 **Yet another - EEG Neural Visualizer**
 
 Braindecoder 2 is a Python-based application that visualizes EEG data through neural fields and decodes them into images using a trained U-Net model. The application features a graphical user interface (GUI) built with Tkinter, allowing users to load EEG data, switch between channels, visualize neural field patterns, decode images, and log performance metrics.
@@ -37,6 +39,14 @@ Run the Application:
 
 python app.py
 
+# Download the model
+
+You can download a model with 144 epochs from huggingface: 
+
+https://huggingface.co/Aluode/Braindecoder/tree/main
+
+OR 
+
 # Train the Model:
 
 Training the Image Decoder
@@ -51,9 +61,9 @@ Select Train Model.
 
 Choose the directory containing original images.
 
-Choose the directory containing field images.
+Choose the directory where you want to put the field images.
 
-The training process will start, displaying progress. Best models are saved as best_model.pth.
+The training process will start, displaying progress. Best models are saved as best_model.pth in the project root. 
 
 # Saving and Loading Models
 
@@ -79,7 +89,7 @@ Select Decode Field Image.
 
 Choose a field image to decode. The decoded image will be displayed without requiring a paired original.
 
-# Using the GUI for Visualization
+# Using the GUI for EEG Visualization
 
 Load EEG Data:
 
@@ -96,6 +106,14 @@ Playback Controls:
 Use the Play button to start or pause the visualization.
 
 Adjust the Time Position slider to seek within the EEG data.
+
+What ever images you see, most likely come from the interplay of the Image model and the "biological bridge"
+that is bunch of neuron simulations interacting with the image model neural network. 
+
+So while the neural field is derived from the eeg, it is unlikely that the images you see are actually 
+coming from the eeg, even though the eeg does have a effect on the stream of images coming and going. 
+You may even see something that was not on the training set, but that is most likely a effect of the 
+latent space of the image model. 
 
 # Adjust Frequency Controls:
 
