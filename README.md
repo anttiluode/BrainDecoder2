@@ -1,7 +1,7 @@
 # Brain Decoder 2
 
 EDIT: I added the star pattern neural field system that made the most interesting models. Else it has problems, 
-the models trained with it work with the app.py too in which channel selection etc work. 
+it does not have the "biological bridge" the models trained with it work with the app.py too in which channel selection etc work. 
 
 ![](image.png)
 
